@@ -10,3 +10,9 @@
 </head>
 <body <?php body_class(); ?>>
   
+<!-- site-header -->
+<div class="container">
+  <header class="site-header">
+    <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+    <h5><?php bloginfo('description'); ?></h5>
+  </header><!-- /site-header -->

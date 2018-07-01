@@ -1,4 +1,45 @@
 body {
-  background-color: green;
-  color: beige;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+a:link,
+a:visited {
+  color: #006ec3;
+}
+
+p {
+  line-height: 1.45em;
+}
+
+/* General Layout */
+div.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+article.post {
+  border-bottom: 2px dotted #bbb;
+}
+
+article.post:last-of-type {
+  border-bottom: none;
+}
+
+/* Site Header */
+.site-header {
+  border-bottom: 2px solid #999;
+}
+
+/* Site Footer */
+.site-footer {
+  margin-top: 30px;
+  border-top: 2px solid #999;
+}
+.site-footer p {
+  padding: 0;
+  margin: 10px 0  0 0;
 }
