@@ -10,9 +10,27 @@
 </head>
 <body <?php body_class(); ?>>
   
-<!-- site-header -->
 <div class="container">
+
+  <!--  .site-header -->
   <header class="site-header">
     <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-    <h5><?php bloginfo('description'); ?></h5>
+    <h5>
+      <?php bloginfo('description'); ?>
+      <?php if (is_page('portfolio')) : ?>
+        - Thank you for viewing our work.
+      <?php endif; ?>
+    </h5>
+
+    <nav class="site-nav">
+      <?php
+        $args = array(
+          'theme_location'  =>   'primary'
+        );
+      ?>
+      <?php wp_nav_menu($args); ?>
+    </nav>
+
+
   </header><!-- /site-header -->
+  
