@@ -1,0 +1,8 @@
+node_modules
+_resources
+.DS_Store
+*.zip
+*.psd
+*.xd
+*.sketch
+*.ai
