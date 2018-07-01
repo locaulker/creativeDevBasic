@@ -190,3 +190,17 @@ div.content-column {
   cursor: default;
   padding-bottom: 5px;
 }
+
+/* Post Styles */
+.post h2 {
+  margin-bottom: 5px;
+}
+.post p.post-info {
+  font-size: 87%;
+  color: #999;
+  margin-top: 0;
+}
+.post p.post-info a:link,
+.post p.post-info a:visited {
+  color: #999;
+}

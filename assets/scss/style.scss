@@ -201,3 +201,22 @@ div.content-column {
   
   }
 }
+
+/* Post Styles */
+.post {
+
+  h2 {
+    margin-bottom: 5px;
+  }
+  p.post-info {
+    font-size: 87%;
+    color: #999;
+    margin-top: 0;
+
+    a:link,
+    a:visited {
+      color: #999;
+    }
+  }
+
+}
