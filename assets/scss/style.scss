@@ -46,34 +46,35 @@ article.post:last-of-type {
 }
 
 /** Navigation Menus */
-.site-nav ul {
-  margin: 0;
-  padding: 0;
-}
-
-.site-nav ul:before,
-.site-nav ul:after {
-  content: "";
-  display: table;
-}
-.site-nav ul::after {
-  clear: both;
-}
-.site-nav ul li {
-  list-style: none;
-  float: left;
+.site-nav {
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  ul:before,
+  ul:after {
+    content: "";
+    display: table;
+  }
+  ul::after {
+    clear: both;
+  }
+  ul li {
+    list-style: none;
+    float: left;
+  }
 }
 
 /* Header Menu */
 .site-header nav ul li {
   margin-right: 5px;
+  
 }
-
 .site-header nav ul a:link,
 .site-header nav ul a:visited {
   display: block;
   padding: 10px 18px;
-  border: 1px solid #bbb;
+  // border: 1px solid #bbb;
   border-bottom: none;
   text-decoration: none;
   border-radius: 5px 5px 0 0;
@@ -83,7 +84,10 @@ article.post:last-of-type {
   background-color: #ececec;
 }
 .site-header nav ul li.current-menu-item a:link,
-.site-header nav ul li.current-menu-item a:visited {
+.site-header nav ul li.current-menu-item a:visited,
+.site-header nav ul li.current-page-ancestor a:link,
+.site-header nav ul li.current-page-ancestor a:visited {
+  font-weight: 500;
   background-color: #006ec3;
   color: #fff;
 }
@@ -147,5 +151,49 @@ div.content-column {
   }
   p {
     font-size: 85%;
+  }
+}
+
+/* Children Links */
+.children-links {
+  margin-bottom: 20px;
+  font-size: 80%;
+
+  a:link,
+  a:visited {
+    text-decoration: none;
+  }
+
+  ul {
+    float: left;
+  }
+
+  li {
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+  .parent-link {
+    float: left;
+    margin-right: 20px;
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: 1px solid #006ec3;
+    font-size: 120%;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: #fff;
+  }
+  .parent-link a:link,
+  .parent-link a:visited {
+    color: #333;
+  }
+  .current_page_item a:link,
+  .current_page_item a:visited {
+    border-bottom: 3px solid #006ec3;
+    color: #333;
+    font-weight: normal;
+    cursor: default;
+    padding-bottom: 5px;
+  
   }
 }
