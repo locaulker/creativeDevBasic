@@ -259,6 +259,11 @@ div.content-column {
     vertical-align: top;
     padding: 6px;
     margin-right: -5px;
+    border: 1px solid #999;  
+  }
+  #s:focus {
+    -webkit-outline: none;
+    -moz-outline: none;
     outline: none;
   }
 }
