@@ -13,3 +13,6 @@ require get_template_directory() . '/inc/has_children.php';
 
 // get Top Ancestors ID
 require get_template_directory() . '/inc/top_ancestor_id.php';
+
+// Custom Excerpt wor count Length
+require get_template_directory() . '/inc/custom_excerpt_length.php';

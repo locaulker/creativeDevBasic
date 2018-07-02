@@ -32,15 +32,9 @@
 
             /* End Category/Categories */
             ?>          
-      </p>
+      </p> 
 
-      <?php if($post->post_excerpt) { ?>
-        <p>
-          <?php echo get_the_excerpt(); ?>
-          <a href="<?php the_permalink(); ?>">Read More &raquo;</a>
-        </p>
-      <?php } else { the_excerpt(); } ?>
-
+        <?php echo the_content(); ?>
     </article>
     
     <?php endwhile; ?>
