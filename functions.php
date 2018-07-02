@@ -4,9 +4,11 @@
 // require "inc/enqueue.php"; OR
 require get_template_directory() . '/inc/enqueue.php';
 
-// Register Navigation Menus
-// require "inc/nav_menus.php"; OR
-require get_template_directory() . '/inc/nav_menus.php';
+/* Add Theme Support
+  -01 Register Navigation Menus
+  -02 Add Featured Image Support
+*/
+require get_template_directory() . '/inc/theme-support.php';
 
 // Dose Current Page have Children?
 require get_template_directory() . '/inc/has_children.php';

@@ -45,6 +45,12 @@ article.post:last-of-type {
   }
 }
 
+/** Image Styles */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /** Navigation Menus */
 .site-nav {
   ul {
@@ -219,4 +225,16 @@ div.content-column {
     }
   }
 
+}
+
+/* Thumbnail */
+.has-thumbnail {
+  position: relative;
+  padding-left: 200px;
+
+  .post-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }

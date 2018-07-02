@@ -3,7 +3,19 @@
   <?php if (have_posts())  : ?>
     <?php while(have_posts()) : the_post(); ?>
     
-    <article class="post">
+    <!-- 
+      Add CSS class: 'has-thumbnail' if post has featured image. The opening <article> tag should look like below:
+      <artticle class="post has-thumbnail">
+      Note: 'has-thumbnail' is styled in css
+    -->
+    <article class="post <?php if (has_post_thumbnail()) { ?>has-thumbnail<?php } ?>">
+
+      <!-- Display Featured Image -->
+      <div class="post-thumbnail">
+        <a href="<?php the_permalink(); ?>">
+          <?php the_post_thumbnail('small-thumbnail'); ?>
+        </a>
+      </div>
 
       <!-- Getting the Post Title -->
       <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
@@ -32,7 +44,8 @@
 
             /* End Category/Categories */
             ?>          
-      </p>
+      </p><!-- End Date Article was posted -->
+
 
       <?php if($post->post_excerpt) { ?>
         <p>

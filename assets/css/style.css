@@ -44,6 +44,12 @@ article.post:last-of-type {
   margin: 10px 0  0 0;
 }
 
+/** Image Styles */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /** Navigation Menus */
 .site-nav ul {
   margin: 0;
@@ -203,4 +209,15 @@ div.content-column {
 .post p.post-info a:link,
 .post p.post-info a:visited {
   color: #999;
+}
+
+/* Thumbnail */
+.has-thumbnail {
+  position: relative;
+  padding-left: 200px;
+}
+.has-thumbnail .post-thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
 }

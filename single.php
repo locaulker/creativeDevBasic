@@ -34,6 +34,9 @@
             ?>          
       </p> 
 
+      <!-- Display Featured Image -->
+      <?php the_post_thumbnail('banner-image'); ?>
+
         <?php echo the_content(); ?>
     </article>
     
