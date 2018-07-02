@@ -238,3 +238,27 @@ div.content-column {
     left: 0;
   }
 }
+
+/* Search Form & Results */
+.hd-search {
+  float: right;
+
+  label {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+  }
+  #searchsubmit {
+    background-color: #006ec3;
+    color: #fff;
+    padding: 8px 14px;
+    border: none;
+    vertical-align: top;
+  }
+  #s {
+    vertical-align: top;
+    padding: 6px;
+    margin-right: -5px;
+    outline: none;
+  }
+}
