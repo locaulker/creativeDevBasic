@@ -1,8 +1,10 @@
-<!--
+<?php
+/* <!--
 Add CSS class: 'has-thumbnail' if post has featured image. The opening <article> tag should look like below:
 <artticle class="post has-thumbnail">
 Note: 'has-thumbnail' is styled in css
--->
+--> */
+?>
 <article class="post <?php if (has_post_thumbnail()) { ?>has-thumbnail<?php } ?>">
 
   <!-- Display Featured Image -->

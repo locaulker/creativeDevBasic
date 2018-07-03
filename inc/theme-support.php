@@ -9,8 +9,9 @@ function creativeDevBasic_setup() {
     'footer'    =>    __( 'Footer Menu' )
   ));
 
-  // Add Featured Image Support
+  // Add Theme Support
   add_theme_support('post-thumbnails');
+  add_theme_support('post-formats', array('aside', 'gallery', 'link'));
 
     // Add Image Sizes
     add_image_size('small-thumbnail', 180, 120, true);
