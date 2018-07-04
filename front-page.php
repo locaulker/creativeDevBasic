@@ -1,38 +1,79 @@
-<?php get_header(); ?>
+<?php
 
-  <?php if (have_posts())  : ?>
-    <?php while(have_posts()) : the_post(); ?>
-    
-    <article class="post page">
+get_header(); ?>
+	
+	<!-- site-content -->
+	<div class="site-content clearfix">
 
-      <?php if(has_children() || $post->post_parent > 0) : ?>
-        <nav class="site-nav children-links clearfix">
-          <span class="parent-link">
-            <a href="<?php get_the_permalink(get_top_ancestor_id()) ?>">
-              <?php echo get_the_title(get_top_ancestor_id()); ?>
-            </a>
-          </span>
+    <?php if (have_posts()) :
+      while (have_posts()) : the_post();
 
-          <ul>
-            <?php
-            $args = array(
-              'child_of'  => get_top_ancestor_id(),
-              'title_li'  => ''
-            );
-            wp_list_pages($args); ?>
-          </ul>
-        </nav>
-      <?php endif; ?>
+        the_content();
 
-      <h2><?php the_title(); ?></h2>
-      <?php the_content(); ?>
+      endwhile;
 
-    </article>
-    
-    <?php endwhile; ?>
-    <?php else: 
-      echo '<p>No content found</p>';
-    ?>
-  <?php endif; ?>
+      else :
+        echo '<p>No content found</p>';
 
-<?php get_footer(); ?>
+      endif; ?>
+
+      <!-- home columns -->
+      <div class="home-columns clearfix">
+      
+        <div class="one-half">
+          <!-- Opinion posts loop begins here -->
+        <?php
+        // $opinionPosts = new WP_Query('cat=11&posts_per_page=2');
+        $opinionPosts = new WP_Query(array(
+          'cat' => 11,
+          'posts_per_page' => 2
+        ));
+
+        if ($opinionPosts->have_posts()) :
+
+          while ($opinionPosts->have_posts()) : $opinionPosts->the_post(); ?>
+            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <?php the_excerpt(); ?>
+        <?php endwhile;
+          // 
+          else :
+
+        endif;
+        wp_reset_postdata();
+        ?><!-- Opinion posts loop ends here -->
+        </div><!-- /one-half -->
+
+        
+        <div class="one-half last">
+        <!-- News posts loop begins here -->
+        <?php
+        // $opinionPosts = new WP_Query('cat=11&posts_per_page=2');
+        $newsPosts = new WP_Query(array(
+          'cat' => 12,
+          'posts_per_page' => 2
+        ));
+
+        if ($newsPosts->have_posts()) :
+
+          while ($newsPosts->have_posts()) : $newsPosts->the_post(); ?>
+            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <?php the_excerpt(); ?>
+        <?php endwhile;
+          // 
+          else :
+
+        endif;
+        wp_reset_postdata();
+
+        ?><!-- News posts loop ends here -->
+        </div><!-- /one-half -->
+
+      </div><!-- /home columns -->
+
+
+
+	</div><!-- /site-content -->
+	
+	<?php get_footer();
+
+?>

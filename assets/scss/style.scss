@@ -191,6 +191,36 @@ img {
   }
 }
 
+/* Post Columns */
+.home-columns {
+  padding-top: 30px;
+}
+.one-half {
+  width: 45%;
+  float: left;
+  margin-right: 10%;
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 95%;
+    font-weight: 500;
+    padding: 0;
+    margin-bottom: 0px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+.last {
+  margin-right: 0;
+}
+
+
 /* Main Column */
 .main-column {
   width: 66%;
