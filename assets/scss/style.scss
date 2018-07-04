@@ -154,6 +154,26 @@ img {
   }
 }
 
+/* Main Column */
+.main-column {
+  width: 66%;
+  float: left;
+}
+
+/* Side Column */
+.secondary-column {
+  width: 33%;
+  float: right;
+}
+
+/* Footer Widget Area */
+.footer-widget-area {
+  width: 25%;
+  float: left;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
 /* Footer Menu */
 .site-footer nav ul {
   li {

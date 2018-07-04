@@ -18,3 +18,6 @@ require get_template_directory() . '/inc/top_ancestor_id.php';
 
 // Custom Excerpt wor count Length
 require get_template_directory() . '/inc/custom_excerpt_length.php';
+
+// Add Widget Locations
+require get_template_directory() . '/inc/widget-locations.php';
