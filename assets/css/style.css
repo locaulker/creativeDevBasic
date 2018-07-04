@@ -11,6 +11,12 @@ a:visited {
 
 p {
   line-height: 1.45em;
+  margin: 0 0 1em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 1em 0;
+  font-weight: normal;
 }
 
 /* General Layout */
@@ -51,6 +57,11 @@ article.post:last-of-type {
   font-weight: normal;
   font-style: italic;
 }
+.post-aside .mini-meta a,
+.post-link .mini-meta a {
+  color: #777;
+  text-decoration: none;
+}
 
 .post-aside {
   background-color: #FFF5CB;
@@ -64,6 +75,12 @@ article.post:last-of-type {
 .post-link a {
   display: block;
   padding: 20px;
+  text-decoration: none;
+}
+
+.post-link-text {
+  line-height: 1.65em;
+  color: #004982;
 }
 
 /* Link Post Format Gallery */
@@ -84,6 +101,18 @@ article.post:last-of-type {
 /* Site Header */
 .site-header {
   border-bottom: 2px solid #999;
+  margin-bottom: 20px;
+  padding: 30px 0 0 0;
+}
+.site-header h1 {
+  margin: 0 0 15px 0;
+}
+.site-header h1 a:link,
+.site-header h1 a:visited {
+  text-decoration: none;
+}
+.site-header h5 {
+  margin: 0 0 10px 0;
 }
 
 /* Site Footer */
@@ -94,6 +123,10 @@ article.post:last-of-type {
 .site-footer p {
   padding: 0;
   margin: 10px 0  0 0;
+}
+.site-footer a {
+  text-decoration: none;
+  margin-bottom: 0;
 }
 
 /** Image Styles */
@@ -128,6 +161,7 @@ img {
 .site-header nav ul a:visited {
   display: block;
   padding: 10px 18px;
+  border: 1px solid #bbb;
   border-bottom: none;
   text-decoration: none;
   border-radius: 5px 5px 0 0;
@@ -153,11 +187,51 @@ img {
 
 /* Side Column */
 .secondary-column {
-  width: 33%;
+  width: 30%;
   float: right;
 }
 
+/* Side Column */
+.side-column {
+  width: 30%;
+  float: right;
+}
+
+.side-column .widget-item {
+  border-bottom: 1px solid #DDD;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+h2.widget-title {
+  font-weight: normal;
+  margin-bottom: 10px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 138%;
+}
+
+.widget-item ul {
+  margin: 0;
+  padding: 0;
+}
+
+.widget-item ul li {
+  list-style-position: inside;
+  line-height: 1.65em;
+}
+
+.widget-item p:last-child {
+  margin: 0;
+}
+
 /* Footer Widget Area */
+.footer-widgets {
+  padding-top: 40px;
+  margin-right: -40px;
+}
+
 .footer-widget-area {
   width: 25%;
   float: left;
@@ -227,6 +301,13 @@ div.content-column {
 }
 .info-box p {
   font-size: 85%;
+}
+
+h4.sidebar-class {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 /* Children Links */
